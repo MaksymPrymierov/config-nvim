@@ -23,7 +23,7 @@ call plug#end()
 
 syntax on
 set background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
 set number
 set tabstop=2
 set shiftwidth=2
