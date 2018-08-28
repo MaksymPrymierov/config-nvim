@@ -1,15 +1,19 @@
 call plug#begin('~/.vim/plugged')
-
+"======================================================
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
+"======================================================
 Plug 'jiangmiao/auto-pairs'
+"======================================================
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+"======================================================
 Plug 'kien/ctrlp.vim'
+"======================================================
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'vhdirk/vim-cmake'
+"======================================================
 Plug 'vim-syntastic/syntastic'
+"======================================================
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'godlygeek/tabular'
@@ -18,12 +22,13 @@ Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
 "color themes
 Plug 'morhetz/gruvbox'
+Plug 'robu3/vimongous'
 
 call plug#end()
 
 syntax on
 set background=dark
-"colorscheme gruvbox
+"colorscheme solarized
 set number
 set tabstop=2
 set shiftwidth=2
@@ -92,6 +97,7 @@ let g:syntastic_auto_loc_list            = 1
 let g:syntastic_check_on_open            = 1
 let g:syntastic_check_on_wq              = 0
 let g:syntastic_asm_checkers             = ['asm', 'asm/0']
+":echo syntastic#util#system('echo "$PATH"')
 "=================================================
 "Emmet
 let g:user_emmet_mode='n'    "only enable normal mode functions.
@@ -102,9 +108,6 @@ autocmd FileType html,css EmmetInstall
 "GCC config
 map <F7>   :!g++ %<CR>
 map <F6>   :!./a.out<CR>
-"=================================================
-"Neo complete
-let g:neocomplete#enable_at_startup = 1
 "=================================================
 
 "mappings 
