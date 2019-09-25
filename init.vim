@@ -12,7 +12,7 @@ Plug 'kien/ctrlp.vim'
 "======================================================
 Plug 'nathanaelkane/vim-indent-guides'
 "======================================================
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 "======================================================
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
@@ -24,19 +24,33 @@ Plug 'mattn/emmet-vim'
 Plug 'morhetz/gruvbox'
 Plug 'robu3/vimongous'
 
+Plug 'zxqfl/tabnine-vim'
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+
 call plug#end()
 
 syntax on
 set background=dark
 "colorscheme solarized
 set number
-set tabstop=2
-set shiftwidth=2
+set shiftwidth=8
 set smarttab
 set expandtab
-
+        
 set hlsearch
 set incsearch
+
+set rtp+=~/tabnine-vim
 
 "================================================
 "NerdTree and NerdTreeGit
