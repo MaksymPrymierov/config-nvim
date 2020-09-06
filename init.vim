@@ -10,19 +10,15 @@ Plug 'airblade/vim-gitgutter'
 "======================================================
 Plug 'kien/ctrlp.vim'
 "======================================================
-Plug 'nathanaelkane/vim-indent-guides'
-"======================================================
 "Plug 'vim-syntastic/syntastic'
 "======================================================
-Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
-Plug 'godlygeek/tabular'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
 "color themes
 Plug 'morhetz/gruvbox'
 Plug 'robu3/vimongous'
+Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'zxqfl/tabnine-vim'
 
@@ -46,12 +42,17 @@ set number
 set shiftwidth=8
 set smarttab
 set expandtab
-        
 set hlsearch
 set incsearch
+set list
+set listchars=tab:>-
 
 set rtp+=~/tabnine-vim
 
+map <F2>  : set expandtab<CR>
+map <F3>  : set smarttab<CR>
+map <F4>  : set shiftwidth=4<CR>
+map <F5>  : set shiftwidth=8<CR>
 "================================================
 "NerdTree and NerdTreeGit
 let g:NERDTreeIndicatorMapCustom = {
